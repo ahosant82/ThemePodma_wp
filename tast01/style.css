@@ -1,0 +1,18 @@
+*{}
+
+.site_logo{
+    position: absolute;
+    top: 5%;
+    z-index: 1;
+    width: 100%;
+}
+
+.navbar-nav li{
+    padding: .5rem 2rem;
+}
+
+.navbar-nav li a{
+    color: black;
+    text-decoration: none;
+}
+.img-block_1{
