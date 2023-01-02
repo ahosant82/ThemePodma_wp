@@ -9,10 +9,62 @@
 
 .navbar-nav li{
     padding: .5rem 2rem;
+    text-transform: capitalize;
 }
 
 .navbar-nav li a{
     color: black;
     text-decoration: none;
 }
-.img-block_1{
+
+
+.navbar-nav li:hover{
+    background-color: #344807;
+}
+
+.navbar-nav li:hover a{
+    color: #fff;
+}
+
+/* 
+
+*/
+.hero,.recentPhoto{
+    margin: 1.5rem 0;
+}
+
+.hero .h_title ,.recentPhoto .h_title{
+    padding: 3rem 0;
+}
+.hero P{
+    font-size: .8rem;
+}
+
+.card img{
+    margin-top: -3.5rem;
+    margin-bottom: 1.4rem;
+}
+.card{
+    padding: 2rem 0;
+}
+
+.recentPhoto .inner-section{
+    background-color: rgb(237, 237, 237);
+    width: 96%;
+    padding: 0;
+}
+
+.recentPhoto h5,
+.recentPhoto p{
+    margin: 1rem 2rem;
+}
+
+.news_updare{
+    padding: 2rem 5rem;
+}
+
+/*  */
+
+.footerLeft ul p{
+    color: #fff;
+}

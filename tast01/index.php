@@ -8,47 +8,38 @@
     <?php wp_head();?>
 </head>
 <body>
-    <header>
-        <section class="bennar">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <!-- header area -->
+    <header class="headerArea">
+        <section class="banner">
+            <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-                <div class="carousel-inner">
-
-                    <?php 
-                     $x=0;
-                     while (have_posts()) {the_post();
-                         $x++;
-                    ?>
-                   
-                    <div class="carousel-item active">
-                        <?php the_post_thumbnail();?>
-                    </div>
-                    <?php }?>
-                    <!-- <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    </div> -->
+            <div class="carousel-inner">
+                <?php 
+                    $x=0;
+                    while (have_posts()) {the_post();
+                        $x++;
+                ?>
+                <div class="carousel-item active">
+                    <?php the_post_thumbnail();?>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+                <?php }?>
+                
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
             </div>
         </section>
-
-
-
-        <!-- logo part -->
 
         <div class="site_logo">
             <div class="container">
@@ -60,9 +51,9 @@
         </div>
 
 
-        <!-- navber -->
+         <!-- navber -->
 
-        <nav class="navbar navbar-expand-lg bg-light">
+         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container">              
                 <div class="collapse navbar-collapse" id="navbarNav">
 
@@ -90,8 +81,9 @@
         </nav>
     </header>
 
+    <!-- card -->
     <section class="container hero">
-        <div class="row">
+        <div class="row h_title">
         <?php dynamic_sidebar('h_title');?>
         </div>
         <div class="row">
@@ -117,12 +109,12 @@
         </div>
     </section>
 
-
+    <!-- recent photo -->
     <section class="container recentPhoto">
         <div class="row">
         <?php dynamic_sidebar('h_title_recentPhoto');?>
         </div>
-        <div class="row">
+        <div class="row h_title">
             <div class="col-sm-3 img-block_1">
                 <div class="row">
                 
@@ -158,6 +150,8 @@
 
         </div>
     </section>
+
+    <!-- news letter -->
 
     <section class="container news_updare">
         <div class="row">
@@ -203,8 +197,26 @@
         </section>
         </div>
     </section>
+
+
+
+    <!--  -->
+
+    <footer class="bg-dark">
+        <div class="row">
+            <div class="col-sm-6 footerLeft">
+            <?php dynamic_sidebar('footerLeft');?>
+
+            <ul>
+                        <li><?php dynamic_sidebar('footerLeft_list');?></li>
+            </ul>
+            </div>
+            <div class="col-sm-6 footerRight"></div>
+        </div>
+    </footer>
     
 <?php wp_footer();?>
 </body>
 </html>
+
 

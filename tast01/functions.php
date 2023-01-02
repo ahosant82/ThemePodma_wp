@@ -61,4 +61,20 @@ register_sidebar(array(
     'before_widget'  => '',
 	'after_widget'   => ''
 ));
+
+// 
+
+register_sidebar(array(
+    'name'=>'footerLeft',
+    'id'=>'footerLeft',
+    'before_widget'  => '',
+	'after_widget'   => ''
+));
+
+register_sidebar(array(
+    'name'=>'footerLeft_list',
+    'id'=>'footerLeft_list',
+    'before_widget'  => '',
+	'after_widget'   => ''
+));
 ?>
